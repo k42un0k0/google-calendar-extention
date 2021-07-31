@@ -1,0 +1,27 @@
+{
+  "name": "google-calenadr拡張",
+  "version": "1",
+  "manifest_version": 3,
+  "description": "google-calenadrに対するもろもろの拡張",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs", "downloads"],
+  "action": {
+    "default_title": "Click Me",
+    "default_icon": "icons/128.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.fanbox.cc/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
